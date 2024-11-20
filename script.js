@@ -1,4 +1,4 @@
-const subset = document.getElementsByClassName("subsets");
+const subset = document.getElementsByClassName("title");
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
@@ -7,13 +7,15 @@ xmlhttp.onreadystatechange = function () {
     for (let key in myObj) {
       newImage = document.createElement("img");
       newImage.src = myObj[key].icon;
-      newDiv = document.createElement("div");
+      newDiv = document.createElement("section");
+      newDiv.classList.add("subset");
       newDiv.appendChild(newImage);
       newDiv.innerHTML += myObj[key].category;
       newSpan = document.createElement("span");
       newSpan.innerHTML = myObj[key].score + " / 100";
       newDiv.appendChild(newSpan);
-      subset[0].appendChild(newDiv);
+      //   subset[0].appendChild(newDiv);
+      subset[0].parentNode.insertBefore(newDiv, subset[0].nextSibling);
     }
   }
 };
