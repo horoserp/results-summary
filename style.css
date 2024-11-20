@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+@font-face {
+  font-family: "Medium";
+  src: url(./assets/fonts/static/HankenGrotesk-Medium.ttf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Bold";
+  src: url(./assets/fonts/static/HankenGrotesk-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Extra";
+  src: url(./assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+:root {
+  /* Primary */
+  --Light-Red: hsl(0, 100%, 67%);
+  --Orangey-Yellow: hsl(39, 100%, 56%);
+  --Green-Teal: hsl(166, 100%, 37%);
+  --Cobalt-Blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  /* Background */
+  --Light-Slate-Blue: hsl(252, 100%, 67%);
+  --Light-Royal-Blue: hsl(241, 81%, 54%);
+
+  /* Circle */
+  --Violet-Blue: hsla(256, 72%, 46%, 1);
+  --Persian-Blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Pale-Blue: hsl(221, 100%, 96%);
+  --Light-Lavender: hsl(241, 100%, 89%);
+  --Dark-Gray-Blue: hsl(224, 30%, 27%);
+}
