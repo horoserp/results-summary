@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 18px;
-}
-
 @font-face {
   font-family: "Medium";
   src: url(./assets/fonts/static/HankenGrotesk-Medium.ttf);
@@ -24,6 +20,11 @@ html {
   font-family: "Extra";
   src: url(./assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
   font-weight: 800;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Medium";
 }
 
 :root {
@@ -47,4 +48,89 @@ html {
   --Pale-Blue: hsl(221, 100%, 96%);
   --Light-Lavender: hsl(241, 100%, 89%);
   --Dark-Gray-Blue: hsl(224, 30%, 27%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 50%;
+  box-shadow: 10px 10px 10px 10px var(--Pale-Blue);
+  border-radius: 15px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    var(--Light-Slate-Blue),
+    var(--Light-Royal-Blue)
+  );
+  padding: 3rem;
+  border-radius: 15px;
+}
+
+.results h1,
+.results .circle p,
+.results p {
+  color: var(--Light-Lavender);
+}
+
+.results h2,
+.results h3 {
+  color: var(--White);
+}
+
+.results h1 {
+  font-size: larger;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(var(--Violet-Blue), var(--Persian-Blue));
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.circle h2 {
+  font-size: 2.5rem;
+}
+
+.circle p {
+  font-size: 0.75rem;
+}
+
+.results h3 {
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.results p {
+  text-align: center;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.continue_button {
+  width: 100%;
 }
