@@ -90,8 +90,12 @@ body {
 }
 
 .results h1 {
-  font-size: larger;
   font-weight: normal;
+}
+
+.results h1,
+.summary .title {
+  font-size: larger;
   margin-bottom: 1.5rem;
 }
 
@@ -131,6 +135,48 @@ body {
   padding: 3rem;
 }
 
+.summary .subset {
+  display: flex;
+  justify-content: space-between;
+  font-size: medium;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 5px;
+}
+
+.subset:first-of-type {
+  color: var(--Light-Red);
+  background: color-mix(in hsl, currentColor 10%, transparent);
+}
+
+.subset:nth-of-type(2) {
+  color: var(--Orangey-Yellow);
+  background: color-mix(in hsl, currentColor 10%, transparent);
+}
+
+.subset:nth-of-type(3) {
+  color: var(--Green-Teal);
+  background: color-mix(in hsl, currentColor 10%, transparent);
+}
+
+.subset:nth-of-type(4) {
+  color: var(--Cobalt-Blue);
+  background: color-mix(in hsl, currentColor 10%, transparent);
+}
+
+.subset img {
+  padding-right: 0.75rem;
+}
+
+.subset span {
+  color: var(--Dark-Gray-Blue);
+}
+
 .continue_button {
   width: 100%;
+  padding: 0.75rem 0;
+  margin-top: 1rem;
+  border-radius: 50px;
+  color: var(--White);
+  background-color: var(--Dark-Gray-Blue);
 }

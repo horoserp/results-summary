@@ -11,6 +11,9 @@ xmlhttp.onreadystatechange = function () {
       newDiv = document.createElement("section");
       newSpan = document.createElement("span");
 
+      // Add newImage now for display purposes
+      newDiv.appendChild(newImage);
+
       // Populate elements
       newImage.src = myObj[key].icon;
       newDiv.classList.add("subset");
@@ -18,7 +21,6 @@ xmlhttp.onreadystatechange = function () {
       newSpan.innerHTML = myObj[key].score + " / 100";
 
       // Add elements to DOM
-      newDiv.appendChild(newImage);
       newDiv.appendChild(newSpan);
       subset[0].parentNode.insertBefore(
         newDiv,
