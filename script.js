@@ -1,21 +1,29 @@
 const subset = document.getElementsByClassName("title");
+const continueButton = document.getElementsByClassName("continue_button");
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
     for (let key in myObj) {
+      // Create elements
       newImage = document.createElement("img");
-      newImage.src = myObj[key].icon;
       newDiv = document.createElement("section");
-      newDiv.classList.add("subset");
-      newDiv.appendChild(newImage);
-      newDiv.innerHTML += myObj[key].category;
       newSpan = document.createElement("span");
+
+      // Populate elements
+      newImage.src = myObj[key].icon;
+      newDiv.classList.add("subset");
+      newDiv.innerHTML += myObj[key].category;
       newSpan.innerHTML = myObj[key].score + " / 100";
+
+      // Add elements to DOM
+      newDiv.appendChild(newImage);
       newDiv.appendChild(newSpan);
-      //   subset[0].appendChild(newDiv);
-      subset[0].parentNode.insertBefore(newDiv, subset[0].nextSibling);
+      subset[0].parentNode.insertBefore(
+        newDiv,
+        continueButton[0].previousSibling
+      );
     }
   }
 };
