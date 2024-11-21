@@ -255,3 +255,8 @@ body {
   color: var(--White);
   background-color: var(--Dark-Gray-Blue);
 }
+
+.continue_button:hover {
+  background-color: var(--Cobalt-Blue);
+  color: var(--Light-Lavender);
+}
