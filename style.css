@@ -34,6 +34,12 @@ html {
   --Green-Teal: hsl(166, 100%, 37%);
   --Cobalt-Blue: hsl(234, 85%, 45%);
 
+  /* Transparencies */
+  --Light-Red-LT: hsla(0, 100%, 67%, 0.1);
+  --Orangey-Yellow-LT: hsla(39, 100%, 56%, 0.1);
+  --Green-Teal-LT: hsla(166, 100%, 37%, 0.1);
+  --Cobalt-Blue-LT: hsla(234, 85%, 45%, 0.1);
+
   /* Gradients */
   /* Background */
   --Light-Slate-Blue: hsl(252, 100%, 67%);
@@ -136,8 +142,9 @@ body {
 }
 
 .summary .subset {
-  display: flex;
+  display: inherit;
   justify-content: space-between;
+  position: relative;
   font-size: medium;
   padding: 0.75rem;
   margin-bottom: 0.75rem;
@@ -146,6 +153,8 @@ body {
 
 .subset:first-of-type {
   color: var(--Light-Red);
+  /* I left color-mix in instead of using the color variables I created to
+     show that I learned about color-mix. */
   background: color-mix(in hsl, currentColor 10%, transparent);
 }
 
@@ -170,6 +179,72 @@ body {
 
 .subset span {
   color: var(--Dark-Gray-Blue);
+}
+
+.subset span.span_flex {
+  display: inherit;
+}
+
+.corner {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+}
+
+.corner:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  border-radius: 5px 0 0 0;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+}
+
+.corner:nth-of-type(2) {
+  top: 0;
+  right: 0;
+  border-radius: 0 5px 0 0;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+}
+
+.corner:nth-of-type(3) {
+  bottom: 0;
+  right: 0;
+  border-radius: 0 0 5px 0;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+}
+
+.corner:nth-of-type(4) {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 0 5px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-left-style: solid;
+}
+
+.red {
+  border-color: var(--Light-Red-LT);
+}
+
+.yellow {
+  border-color: var(--Orangey-Yellow-LT);
+}
+
+.green {
+  border-color: var(--Green-Teal-LT);
+}
+
+.blue {
+  border-color: var(--Cobalt-Blue-LT);
 }
 
 .continue_button {
