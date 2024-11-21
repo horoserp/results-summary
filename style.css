@@ -67,7 +67,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 50%;
-  box-shadow: 10px 10px 10px 10px var(--Pale-Blue);
+  box-shadow: 5px 10px 10px 10px var(--Pale-Blue);
   border-radius: 15px;
 }
 
