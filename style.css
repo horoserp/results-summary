@@ -279,6 +279,8 @@ body {
     flex-direction: column;
     max-width: 100%;
     box-shadow: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
   }
 
   .results,
